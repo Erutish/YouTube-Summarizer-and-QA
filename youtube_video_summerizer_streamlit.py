@@ -59,7 +59,7 @@ def main():
     st.markdown('<div class="big-title">YouTube Video Summarizer & Q&A</div>', unsafe_allow_html=True)
     st.markdown('<div class="subtitle">Paste a YouTube video URL, and get a summary or ask a question about the content!</div>', unsafe_allow_html=True)
 
-    api_key = os.getenv("OPENAI_API_KEY")
+    api_key = st.secrets["OPENAI_API_KEY"]
     if not api_key:
         st.error("OPENAI_API_KEY environment variable not set. Please set it before running the app.")
         return
